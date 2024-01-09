@@ -94,6 +94,8 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.2)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     launchy (2.5.2)
       addressable (~> 2.8)
     letter_opener (1.8.1)
@@ -199,6 +201,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise_token_auth (~> 1.2)
+  jsonapi-serializer
   letter_opener (~> 1.8)
   listen (~> 3.3)
   pg (~> 1.1)

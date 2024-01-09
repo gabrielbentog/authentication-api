@@ -12,4 +12,6 @@ class User < ActiveRecord::Base
           :trackable # Logins count
 
   include DeviseTokenAuth::Concerns::User
+
+  attr_accessor :auth_token
 end
