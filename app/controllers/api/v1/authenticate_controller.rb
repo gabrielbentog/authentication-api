@@ -15,8 +15,7 @@ class Api::V1::AuthenticateController < ApplicationController
       @user.auth_token = token["Authorization"]
       render json: UserSerializer.new(@user).serializable_hash.to_json
     else
-      @user.errors.add(:base, 'Invalid credentials') if @user.errors.size == 0
-      render json: ErrorSerializer.serialize(@user.errors), status: :unprocessable_entity
+      render json: { user_auth: 'Invalid credentials' }, status: :not_found
     end
   end
 end
