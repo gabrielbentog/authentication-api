@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
           :recoverable, # Recover password
           :rememberable, # Rememberable user
           :validatable, # Validations
-          :confirmable, # Confirm registration
+          # :confirmable, # Confirm registration
           :trackable # Logins count
 
   include DeviseTokenAuth::Concerns::User
