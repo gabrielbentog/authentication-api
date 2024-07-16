@@ -109,6 +109,8 @@ GEM
     irb (1.14.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
+    jwt (2.8.2)
+      base64
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -220,10 +222,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt
   bootsnap
   byebug
   debug
   devise_token_auth
+  jwt
   pg (~> 1.1)
   puma (>= 5.0)
   rack-cors

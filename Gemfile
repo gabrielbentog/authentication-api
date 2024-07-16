@@ -47,4 +47,6 @@ group :development do
 end
 
 gem 'devise_token_auth'
+gem 'bcrypt'
+gem 'jwt'
 gem 'rack-cors'
