@@ -4,7 +4,7 @@ class AuthenticateController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user && @user.valid_password?(params[:password])
       @user.token = generate_token(@user)
-      render json: @user, status: :ok
+      render json: UserSerializer.new(@user).serializable_hash.to_json
     else
       render json: { error: 'Invalid email or password' }, status: :unauthorized
     end

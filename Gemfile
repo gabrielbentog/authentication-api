@@ -50,3 +50,7 @@ gem 'devise_token_auth'
 gem 'bcrypt'
 gem 'jwt'
 gem 'rack-cors'
+
+# Serielizers
+gem 'jsonapi-serializer'
+gem 'active_model_serializers'
