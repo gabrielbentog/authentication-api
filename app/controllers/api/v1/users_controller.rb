@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show, :update, :destroy]
   def index
     @users = User.all
     render json: UserSerializer.new(@users).serializable_hash.to_json
